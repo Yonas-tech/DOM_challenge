@@ -88,16 +88,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 })
 
-
-
-
-  // allBlogPostEls.onmouseover = function(event) {
-  //   let target = event.target;
-  //   target.style.background = 'red';
-  
-  // };
-  
-  // allBlogPostEls.onmouseout = function(event) {
-  //   let target = event.target;
-  //   target.style.background = 'purple';
-  // };
