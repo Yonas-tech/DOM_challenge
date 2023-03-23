@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   const divEl = document.createElement('div');
   divEl.classList.add('blog-post');
-  const h2El = document.createElement('h2');
+  const h2El = document.createElement('h1');
   h2El.textContent = liEl.textContent; // 'Malibu'
   divEl.appendChild(h2El);
   const pEl = document.createElement('p');
@@ -70,11 +70,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Part 9
   const allBlogPostEls = document.querySelectorAll('.blog-post');
   allBlogPostEls.forEach((element) => {
-       element.addEventListener('mouseout', ()=> element.classList.toggle('purple'))
-       element.addEventListener('mouseenter', ()=> element.classList.toggle('red'))
-       }
-  )
+       element.addEventListener('mouseenter', (e)=> {
+        e.target.classList.add('red')
+        e.target.classList.remove('purple')
+        console.log('enterd 1st')
+      }
+   )
 
+       element.addEventListener('mouseout', (e)=> {
+        e.target.classList.add('purple')
+        e.target.classList.remove('red')
+        console.log('enterd 2nd')
+      }
+  )
 });
 
 
+})
+
+
+
+
+  // allBlogPostEls.onmouseover = function(event) {
+  //   let target = event.target;
+  //   target.style.background = 'red';
+  
+  // };
+  
+  // allBlogPostEls.onmouseout = function(event) {
+  //   let target = event.target;
+  //   target.style.background = 'purple';
+  // };
