@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   h2El.textContent = liEl.textContent; // 'Malibu'
   divEl.appendChild(h2El);
   const pEl = document.createElement('p');
-  pEl.textContent = "That's one thing about me Dom you don't understand.";
+  pEl.textContent = ("That's one thing about me Dom you don't understand.").toUpperCase();
   divEl.appendChild(pEl);
 
   const mainDivEl = document.querySelector('.main');
